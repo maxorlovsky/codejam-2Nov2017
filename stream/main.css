@@ -1,0 +1,64 @@
+*,*:before, *:after { box-sizing:border-box; }
+
+html,body { padding: 0; margin: 0; }
+
+body {
+    background:url("assets/background.jpg") top left no-repeat;
+    background-size: cover;
+}
+
+iframe {
+    border:0;
+}
+
+.plane {
+    width:500px;
+    height:250px;
+    background:url("assets/plane.png") center right no-repeat;
+    position:absolute;
+    left: 50px;
+    top: 5px;
+}
+.plane .camera-placeholder {
+	border: 3px solid grey;
+	width: 324px;
+	height: 224px;
+	color:black;
+	box-sizing:border-box;
+	background: rgba(200, 0, 0, 0.7);
+	padding: 10px;
+}
+
+.contestants {
+    width:100%;
+    float:left;
+    position:absolute;
+	bottom:20px;
+    left:0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contestants .contestant {
+    float:left;
+    position: relative;
+	padding-bottom: 20px;
+}
+
+.contestant .team-name {
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    font-weight: bold;
+	font-size: 1.4rem;
+}
+
+.contestant iframe {
+    width:480px;
+    height:360px;
+}
+
+.hide {
+	visibility: hidden;
+}

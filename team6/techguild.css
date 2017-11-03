@@ -1,0 +1,265 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html { height: 100%; }
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	background-color: #eee;
+	overflow: hidden;
+	margin: 3px;
+	padding: 0;
+}
+
+body.transparent {
+	background: transparent;
+}
+body.transparent .main-section {
+	border: 0;
+	background: transparent;
+}
+
+.main-section {
+    border: 3px solid #000;
+    width: 480px;
+    height: 360px;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+}
+
+
+.main-section .dog-head {
+    border-radius: 50px;
+    width: 35%;
+    height: 50%;
+    background-color: #98600c;
+    position: relative;
+    z-index: 2;
+    border: 2px solid #7a4d09;
+}
+
+.dog-head .dog-mouth {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin-left: -15px;
+    width: 120%;
+    background-color: #9b6513;
+    height: 65px;
+    border-radius: 130px;
+    border-right: 2px solid #7a4f0d;
+    border-left: 2px solid #7a4f0d;
+}
+
+.dog-head .dog-nose{
+    display: flex;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    background-color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13%;
+    position: relative;
+    bottom: -17px;
+    z-index: 1;
+}
+
+.dog-head .dog-eye{
+	background-color: #000;
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	position: relative;
+}
+
+.dog-eye:after {
+    height: 4px;
+    width: 4px;
+    content: ' ';
+    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 100%;
+    top: 5px;
+    left: 5px;
+}
+
+.dog-head .dog-eyes{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20%;
+}
+
+
+.dog-head .dog-chin {
+	border-radius: 0px 0px 20px 20px;
+    position: relative;
+	background-color: #e21f1f;	
+    bottom: -39px;
+    width: 66px;
+    height: 39px;
+    z-index: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dog-chin:after {
+	content: ' ';
+	border-radius: 0px 0px 20px 20px;
+    position: relative;
+	background-color: #e21f1f;	
+    bottom: -39px;
+    width: 46px;
+    height: 29px;
+    z-index: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.dog-ears {
+	position: relative;
+	top: -20px;
+}
+
+
+.dog-ear {
+	width: 30px;
+    height: 85px;
+	position: absolute;
+	background-color: #7a4f0d;
+}
+
+
+.dog-ear:first-child {
+	transform: rotate(48deg);
+	left: 0;
+	border-radius: 25px 0 0 25px;
+}
+
+.dog-ear:last-child {
+	transform: rotate(-48deg);
+	right: 0;
+	border-radius: 0 25px 25px 0;
+}
+
+
+.dog-nose {
+	position: relative;
+}
+
+.dog-nose:after {
+    content: ' ';
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    width: 40px;
+    position: absolute;
+    bottom: -10%;
+    height: 10px;
+    border-radius: 10px;
+    z-index: 10000;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.dog-body {
+	height: 114px;
+    width: 250px;
+    background-color: #98600c;
+    position: relative;
+    z-index: 1;
+    left: -20px;
+    top: 25px;
+    border-radius: 0 40px 20px 70px;
+    border: 2px solid #7a4d09;
+}
+
+.dog-legs{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -53px;
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 20px;
+	
+}
+
+.dog-leg{
+    border-radius: 6px;
+	background-color: #513409;
+    height: 70px;
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+	
+}
+
+.dog-tail{
+    position: absolute;
+    right: 0;
+    top: -22px;
+	background-color: #98600c;
+    z-index: 10;
+    width: 30px;
+    height: 80px;
+    transform: rotate(54deg);
+	border-radius: 23px 19px 20px 20px;
+	
+}
+
+
+.front, .back {
+	display: flex;
+	justify-content: space-between;
+	
+
+
+}
+
+.front >:first-child, .back >:first-child {
+	background-color: #98600c;
+}
+
+.dog-spots{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+.dog-spot{
+	border-radius:100%;
+	background-color:#4e3824;
+	width:30px;
+	height:35px;
+}
+
+.dog-spot:nth-child(1){
+    top: 20px;
+    left: 40px;
+    position: relative;
+}
+.dog-spot:nth-child(2){
+    top: 15px;
+    left: 170px;
+    position: relative;
+}
+.dog-spot:nth-child(3){
+	top: -9px;
+    left: 100px;
+    position: relative;
+}

@@ -1,0 +1,389 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html { height: 100%; }
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	background-color: #eee;
+	overflow: hidden;
+	margin: 3px;
+	padding: 0;
+}
+
+body.transparent {
+	background: transparent;
+}
+body.transparent .main-section {
+	border: 0;
+	background: transparent;
+}
+
+.main-section {
+	border: 3px solid #000;
+	width: 480px;
+	height: 360px;
+	background-color:#fff;
+}
+
+.face {
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	border: 1px solid black;
+	margin: 25px;
+	background-color: brown;position:relative;
+}
+
+
+.eye {
+	width: 36px;
+	height: 40px;
+	border: 1px solid black;
+	background: black;
+	border-radius: 100%;
+	position:absolute;
+}
+
+.nose {
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+	background: black;
+	border-radius: 100%;
+	top:91px;
+	left:88px;
+	position: absolute;
+}
+.ear {
+	width: 36px;
+	height: 40px;
+	border: 1px solid black;
+	background: black;
+	border-radius: 100%;
+	position: absolute;
+
+}
+.eye.left {
+	float: left;
+	left:41px;
+	top:39px
+}
+
+.eye-left-inside {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    border-radius: 5px;
+    top: 8px;
+    left: 6px;
+}
+
+
+.eye-right-inside {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    border-radius: 5px;
+    top: 8px;
+    left: 6px;
+}
+.ear.left {
+	float: left;
+	left:19px;
+	top:-10px
+}
+
+.eye.right {
+	float: right;
+	right:41px;
+	top:39px;
+}
+
+.ear.right {
+	float: right;
+	right:19px;
+	top:-10px;
+}
+
+.dog-body {
+	width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    background: brown;
+    top: 143px;
+    left: 35px;
+    position: absolute;
+}
+
+.dog-body-patch {
+	width: 100px;
+    position: absolute;
+    height: 121px;
+    background-color: darksalmon;
+    top: 51px;
+    left: 36px;
+    z-index: 131;
+    border-radius: 100%;
+
+}
+
+.dog-body-patch span {
+	color:red;
+	font-size: 50px;
+	position: absolute;
+	left: 184px;
+}
+.dog-body1 {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background: brown;
+    top: 163px;
+    left: 157px;
+    position: absolute;
+}
+
+.dog-body-tail {
+    width: 131px;
+    height: 8px;
+    background: brown;
+    position: absolute;
+    bottom: -60px;
+	left: 222px;
+	border-radius: 12px;
+}
+
+.legleft {
+    width: 36px;
+    height: 40px;
+    border: 1px solid brown;
+    background:brown;
+    border-radius: 100%;
+    position: absolute;
+    top: 285px;
+    left: 56px;
+}
+
+.legright {
+    width: 36px;
+    height: 40px;
+    border: 1px solid brown;
+    background: brown;
+    border-radius: 100%;
+    position: absolute;
+    top: 287px;
+    left: 173px;
+}
+
+.legleftback {
+	width: 36px;
+    height: 40px;
+    border: 1px solid brown;
+    background:brown;
+    border-radius: 100%;
+    position: absolute;
+    top: 278px;
+    left: 238px;
+}
+
+.mouth {
+	width: 36px;
+    height: 40px;
+    border: 1px solid black;
+    background: black;
+    border-radius: 100%;
+    position: absolute;
+    top: 126px;
+    left: 82px;
+}
+
+.tongue {
+	width: 13px;
+    height: 22px;
+    border: 1px solid red;
+    background: red;
+    border-radius: 100%;
+    position: absolute;
+    top: 139px;
+    left: 92px;
+}
+
+.bone-wrapper {
+	position: relative;
+	z-index: 200;
+}
+
+.bone-body {
+	width: 100px;
+    height: 20px;
+    background: white;
+    position: absolute;
+    top: 169px;
+    left: 61PX;
+    z-index: 100;
+}
+
+.bone-body span {
+	font-size: 12px;
+	font-family: "Comic Sans MS";
+}
+
+.bone-circle1{
+	position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: white;
+    top: 161px;
+    left: 50px;
+    z-index: 100;
+}
+
+.bone-circle2{
+	position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: white;
+    top: 174px;
+    left: 50px;
+    z-index: 100;
+}
+
+.bone-circle3{
+	position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: white;
+    top: 174px;
+    left: 150px;
+    z-index: 100;
+}
+
+.bone-circle4{
+	position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: white;
+    top: 162px;
+    left: 150px;
+    z-index: 100;
+}
+
+.dog-body-tail, .eye-left-inside {
+  -webkit-animation-name: wiggle;
+  -ms-animation-name: wiggle;
+  -ms-animation-duration: 1000ms;
+  -webkit-animation-duration: 1000ms;
+  -webkit-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  transform-origin: bottom;
+}
+
+@-webkit-keyframes wiggle {
+  0% {-webkit-transform: rotate(10deg);}
+  25% {-webkit-transform: rotate(-10deg);}
+  50% {-webkit-transform: rotate(20deg);}
+  75% {-webkit-transform: rotate(-5deg);}
+  100% {-webkit-transform: rotate(0deg);}
+}
+
+@-ms-keyframes wiggle {
+  0% {-ms-transform: rotate(1deg);}
+  25% {-ms-transform: rotate(-1deg);}
+  50% {-ms-transform: rotate(1.5deg);}
+  75% {-ms-transform: rotate(-5deg);}
+  100% {-ms-transform: rotate(0deg);}
+}
+
+@keyframes wiggle {
+  0% {transform: rotate(10deg);}
+  25% {transform: rotate(-10deg);}
+  50% {transform: rotate(20deg);}
+  75% {transform: rotate(-5deg);}
+  100% {transform: rotate(0deg);}
+}
+
+.face {
+	-webkit-animation-name: move;
+	-ms-animation-name: move;
+	-ms-animation-duration: 1000ms;
+	-webkit-animation-duration: 1000ms;
+	-webkit-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-ms-animation-timing-function: ease-in-out;
+	transform-origin: bottom;
+	animation-delay: 800ms;
+
+}
+
+.mouth, .tongue {
+	-webkit-animation-name: expand;
+	-ms-animation-name: expand;
+	-ms-animation-duration: 2000ms;
+	-webkit-animation-duration: 2000ms;
+	-webkit-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-ms-animation-timing-function: ease-in-out;
+	transform-origin: bottom;
+	animation-delay: 300ms;
+}
+
+
+.legleft, .legright, .legleftback {
+	-webkit-animation-name: wiggle;
+	-ms-animation-name: wiggle;
+	-ms-animation-duration: 800ms;
+	-webkit-animation-duration: 800ms;
+	-webkit-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-ms-animation-timing-function: ease-in-out;
+	transform-origin: bottom;
+	animation-delay: 1000ms;
+
+}
+
+.bone-wrapper {
+	-webkit-animation-name: wiggle;
+	-ms-animation-name: wiggle;
+	-ms-animation-duration: 20000ms;
+	-webkit-animation-duration: 20000ms;
+	-webkit-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-ms-animation-timing-function: ease-in-out;
+	transform-origin: bottom;
+
+}
+
+@keyframes move {
+	0% {transform: translateX(20px);}
+	25% {transform: translateX(40px);}
+	50% {transform: translateX(60px);}
+	75% {transform: translateX(40px);}
+	100% {transform: translateX(20px);}
+}
+
+@keyframes expand {
+	0% {transform: scale(1);}
+	25% {transform: scale(1.2);}
+	50% {transform: scale(1.3);}
+	75% {transform: scale(1.2);}
+	100% {transform: scale(1);}
+}

@@ -1,0 +1,290 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html { height: 100%; }
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	background-color: #eee;
+	overflow: hidden;
+	margin: 3px;
+	padding: 0;
+}
+
+body.transparent {
+	background: transparent;
+}
+body.transparent .main-section {
+	border: 0;
+	background: transparent;
+}
+
+.main-section {
+	border: 3px solid #000;
+	width: 480px;
+	height: 360px;
+	background-color:#fff;
+}
+
+.dog .head {
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+	border-radius: 50%;
+	margin: 0 auto;
+	position: relative;
+	background-color: orange;
+	z-index: 100;
+	animation: head 4s ease-in-out infinite;
+}
+
+.dog .eye {
+	width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.dog .eye span {
+	width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 5px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.dog .eye.left {
+	left: 50px;
+}
+
+.dog .eye.left span {
+	left: 5px;
+}
+
+.dog .eye.right span {
+	right: 5px;
+}
+
+.dog .eye.right {
+	right: 50px;
+}
+
+.dog .nose {
+	border: 1px solid black;
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    top: 63%;
+    z-index: 60;
+    margin-top: -20px;
+    background-color: black;
+}
+
+.dog .ear {
+	width: 50px;
+	height: 150px;
+	border-radius: 50%;
+	border: 1px solid orangered;
+	background-color: brown;
+	position: absolute;
+	top: 0;
+}
+
+.dog .ear.left {
+	left: -15px;
+	transform: rotate(30deg);
+
+}
+
+.dog .ear.right {
+	right: -15px;
+	transform: rotate(-30deg);
+}
+
+.mouth {
+	height: 90px;
+    width: 70px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -35px;
+    background-color: gray;
+    border-radius: 50%;
+    z-index: 50;
+}
+
+.dog .body {
+	position: relative;
+}
+
+.dog .torso {
+	border: 1px solid black;
+	background-color: orange;
+	border-radius: 20%;
+	position: relative;
+	margin: 0 auto;
+    width: 150px;
+    height: 200px;
+    z-index: 50;
+    margin-top: -50px;
+}
+
+.dog .limb {
+	border: 1px solid black;
+	border-radius: 50% 50% 35% 35%;
+	width: 65px;
+	height: 50px;
+	background: brown;
+	position: absolute;
+	bottom: 0;
+}
+
+.dog .limb.left {
+	left: 130px;
+}
+
+.dog .limb.right {
+	right: 130px;
+}
+
+.dog .limb.front {
+	bottom: 0;
+	z-index: 60;
+	
+}
+
+.dog .limb.front.left {
+	left: 160px;
+}
+
+.dog .limb.front.right {
+	right: 160px;
+}
+
+.tail {
+	width: 35px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid orangered;
+    background-color: brown;
+    position: absolute;
+    top: 30px;
+    right: 190px;
+    transform: rotate(45deg);
+    z-index: 10;
+    animation: tail 0.8s infinite;
+    transform-origin: 100% 100%;
+}
+
+.leg { 
+	width: 55px;
+	height: 200px;
+	background-color: brown;
+	position: absolute;
+	top: 0; 
+	z-index: 50;
+    margin-top: -30px;
+}
+
+.leg.left {
+	left: 165px;
+} 
+.leg.right {
+	right: 165px;
+} 
+
+.tag {
+	width: 130px;
+    height: 60px;
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    /* background: white; */
+    margin-left: -65px;
+}
+
+.tag .string {
+	height: 15px;
+	width: 3px;
+	top: 6px;
+	background: black;
+	position: absolute;
+}
+
+.tag .string.left {
+	left: 20px;
+}
+
+.tag .string.right {
+	right: 20px;
+}
+
+.tag .label {
+    background: gray;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 18px;
+    margin-left: -50px;
+	border-radius: 20%;
+	text-align: center;
+	font-family: arial;
+	font-size: 13px;
+	line-height: 30px;
+	color: white;
+}
+
+.mouth .tongue {
+	width: 20px;
+    height: 30px;
+    background: #d43d58;
+    border: 1px solid black;
+    border-radius: 0 0 30% 30%;
+    display: block;
+    margin: 0 auto;
+	margin-top: 75%;
+	animation: tongue 4s ease-in-out infinite;
+}
+
+.under-torso {
+	background: #dfdfdf;
+	width: 80%;
+	height: 100%;
+}
+
+@keyframes tail {
+    0%   { transform: rotate(50deg); }
+	50% { transform: rotate(60deg); }
+	100%   { transform: rotate(50deg); }
+}
+
+@keyframes head {
+    0%   { transform: rotate(0deg); }
+	10% { transform: rotate(15deg); }
+	70% { transform: rotate(15deg); }
+	80% { transform: rotate(0deg); }
+	100%   { transform: rotate(0deg); }
+}
+
+@keyframes tongue {
+    0%   { height: 30px; }
+	10% {  height: 10px; }
+	70% {  height: 10px; }
+	80% { height: 30px; }
+	100%   { height: 30px; }
+}

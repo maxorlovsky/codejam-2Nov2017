@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Puppy Website Template</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<ul>
+				<li class="current">
+					<a class="home bonex10y15" href="#">Home</a>
+				</li>
+				<li>
+					<a class="about" href="#">About</a>
+				</li>
+				<li>
+					<a class="blog" href="#">Blog</a>
+				</li>
+				<li>
+					<a class="services" href="#">Services</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+		<div id="background">
+			<div>
+				<div>
+					<div>
+						<h1>&#8220;This codejam is Awesome&#8221;.</h1>
+						<p class="bone_inside">
+							This website template has been designed by Free <strong class="bone">x11y19</strong> Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi.
+							<br bonex2y3/>Example bone here! <strong id="example_bone">"{x:1,y:1}"</strong>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section">
+			<ul>
+				<li>
+					<a href="#"><img src="images/dog2.jpg" alt="Image"></a>
+					<div>
+						<p>
+							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+						</p>
+						<a href="#" class="readmore">Read more &gt;&gt;</a>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="images/dog2.jpg" alt="Image"></a>
+					<div>
+						<p>
+							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+						</p>
+						<a href="#" class="readmore">Read more &gt;&gt;</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<bone>x18y5</bone>
+		<ul class="flleft">
+			<li >
+				<a href="#"><img src="images/dog2.jpg" alt="Image"></a>
+				<p>
+					This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+				</p>
+				<a href="#" class="readmore">Read more &gt;&gt;</a>
+			</li>
+			<li>
+			<a href="#"><img src="images/dog2.jpg" alt="Image"></a>
+				<p class="bone"><i>x19y1</i>
+					This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+				</p>
+				<a href="#" class="readmore">Read more &gt;&gt;</a>
+				<span id="twobones"><span>x15y9</span><span>x16y9</span></span>
+			</li>
+		</ul>
+	</div>
+
+	<div id="footer">
+		<div class="logo">
+			<a href="#"><img src="images/logo.jpg" alt="Logo"></a>
+		</div>
+		<ul>
+			<li>
+				<a href="#">Home</a>
+			</li>
+			<li bone data-x="6" data-y="19">
+				<a href="#">About</a>
+			</li>
+			<li>
+				<a href="#">Blog</a>
+			</li>
+			<li>
+				<a href="#">bonex14y10</a>
+			</li>
+		</ul>
+		<p id="bonex7y15">
+			&copy; Copyright &copy; x20y17. Company name all rights reserved
+		</p>
+		<div id="connect">
+			<a data-bone="x3y7" href="http://freewebsitetemplates.com/go/facebook/" target="_blank" id="facebook">Facebook</a>
+			<a data-bone="x6y2"href="http://freewebsitetemplates.com/go/twitter/" target="_blank" id="twitter">Twitter</a>
+			<a data-bone="x18y18"href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" id="googleplus">Google&#43;</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		// array to store all your elements from which you parse bone coords
+		let bonesElms = [];
+		// array to store bones coordinates
+		let bones = [];
+
+		// example
+		let elm = document.getElementById("example_bone");
+		bonesElms.push(elm);
+		let coords = JSON.parse(elm.textContent);
+		bones.push({x: coords.x, y: coords.y});
+
+	// PUT YOUR CODE HERE ////////////////////////////////////////////////////
+
+	var a = Array.from(document.querySelectorAll("bone"));
+	var b = Array.from(document.querySelectorAll("[class*='bone']"));
+	var c = Array.from(document.querySelectorAll("[id*='bone']"));
+	var d = Array.from(document.querySelectorAll("[data-bone]"));
+	var d = Array.from(document.querySelectorAll("[data-bone]"));
+
+	bonesElms = a.concat(b);
+	bonesElms = bonesElms.concat(c);
+	bonesElms = bonesElms.concat(d);
+	bonesElms.push(document.querySelector('#section'));
+
+	//////////////////////////////////////////////////////////////////////////
+		// DO NOT DELETE THIS, KEEP AS LAST IN SCRPT TAG
+		for (let boneElm of bonesElms) {
+			boneElm.style.backgroundColor = "rgba(255, 100, 0, 0.2)";
+		}
+	</script>
+</body>
+</html>

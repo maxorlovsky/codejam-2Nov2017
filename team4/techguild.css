@@ -1,0 +1,443 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+@keyframes tilt {
+	30% {
+		transform: rotate(20deg);
+	}
+	60% {
+		transform: rotate(40deg);
+	}
+	80% {
+		transform: rotate(60deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes head {
+	30% {
+		top: 50px;
+	}
+	60% {
+		top: 60px;
+	}
+	80% {
+		top: 70px;
+	}
+	100% {
+		top: 50px;
+	}
+}
+
+@keyframes ear {
+	30% {
+		top: 0px;
+	}
+	60% {
+		top: 10px;
+	}
+	80% {
+		top: 20px;
+	}
+	100% {
+		top: 0px;
+	}
+}
+
+@keyframes tag {
+	30% {
+		bottom: -40px;
+	}
+	60% {
+		bottom: -50px;
+	}
+	80% {
+		bottom: -60px;
+	}
+	100% {
+		bottom: -40px;
+	}
+}
+
+@keyframes mouth {
+	30% {
+		height: 30px;
+	}
+	60% {
+		height: 20px;
+	}
+	80% {
+		height: 10px;
+	}
+	100% {
+		height: 30px;
+	}
+}
+
+@keyframes ttilt {
+	20% {
+		transform: rotate(0deg);
+	}
+	40% {
+		transform: rotate(-20deg);
+	}
+	60% {
+		transform: rotate(0deg);
+	}
+	80% {
+		transform: rotate(20deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+
+html { height: 100%; }
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	background-color: #eee;
+	overflow: hidden;
+	margin: 3px;
+	padding: 0;
+}
+
+body.transparent {
+	background: transparent;
+}
+body.transparent .main-section {
+	border: 0;
+	background: transparent;
+}
+
+.main-section {
+	border: 3px solid #000;
+	width: 480px;
+	height: 360px;
+	background-color:#fff;
+}
+
+.dog {
+	position: absolute;
+	width: 240px;
+	height: 180px;
+	transform: scale(0.75);
+}
+
+.left-ear {
+	position: absolute;
+	width: 50px;
+	height: 70px;
+	background-color: brown;
+	top: 0;
+	left: 15px;
+	border: 1px solid transparent;
+	border-radius: 15px;
+	animation: ear 0.4s linear infinite;
+
+}
+
+.left-ear .in {
+	position: absolute;
+	width: 20px;
+	height: 60px;
+	background-color: pink;
+	bottom: 0px;
+	right: 15px;
+	border: 1px solid transparent;
+	border-radius: 15px;
+}
+
+.right-ear {
+	position: absolute;
+	width: 50px;
+	height: 70px;
+	background-color: brown;
+	top: 0;
+	right: 15px;
+	border: 1px solid transparent;
+	border-radius: 15px;
+	animation: ear 0.4s linear infinite;
+}
+
+.right-ear .in {
+	position: absolute;
+	width: 20px;
+	height: 60px;
+	background-color: pink;
+	bottom: 0px;
+	right: 15px;
+	border: 1px solid transparent;
+	border-radius: 15px;
+}
+
+.face {
+	position: absolute;
+	width: 240px;
+	height: 140px;
+	background-color: brown;
+	top: 50px;
+	left: 0;
+	border: 1px solid black;
+	border-radius: 35px;
+	z-index: 10;
+	animation: head 0.4s linear infinite;
+}
+
+.tag {
+	position: absolute;
+	bottom: -40px;
+	left: 100px;
+	width: 30px;
+	height: 30px;
+	transform: rotate(45deg);
+	background-color: gold;
+	z-index: 9;
+
+	animation: tag 0.4s linear infinite;
+}
+
+.tag div {
+	transform: rotate(-45deg);
+	color: black;
+	font-weight: bold;
+	font-size: 22px;
+	text-align: center;
+}
+
+.left-eye {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-color: white;
+	top: 20px;
+	left: 20px;
+	border: 1px;
+	border-radius: 35px;
+}
+
+.left-eye .in {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: black;
+	bottom: 15px;
+	right: 10px;
+	border: 1px;
+	border-radius: 35px;
+}
+
+.right-eye {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-color: white;
+	top: 20px;
+	right: 20px;
+	border: 1px;
+	border-radius: 35px;
+}
+
+.right-eye .in {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: black;
+	bottom: 15px;
+	right: 10px;
+	border: 1px;
+	border-radius: 35px;
+}
+
+.nose {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: black;
+	bottom: 70px;
+	left: 105px;
+	border: 1px;
+	border-radius: 10px;
+}
+
+.mouth {
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	background-color: black;
+	bottom: 20px;
+	left: 70px;
+	animation: mouth 1s linear infinite;
+}
+
+.tongue {
+	position: absolute;
+	width: 20px;
+	height: 40px;
+	background-color: pink;
+	bottom: -30px;
+	right: 10px;
+	border: 1px solid transparent;
+	border-radius: 15px;
+	animation: ttilt 1s linear infinite;
+	transform-origin: 50% 0;
+}
+
+
+.torso {
+	position: absolute;
+	height: 140px;
+	width: 350px;
+	top: 100px;
+	left: 120px;
+	border: 1px;
+	border-radius: 50px;
+	background-color: brown;
+	z-index: 5;
+}
+
+.front-leg-fore {
+	position: absolute;
+	height: 80px;
+	width: 30px;
+	top: 220px;
+	left: 150px;
+	background-color: brown;
+	border-bottom-left-radius: 10px;
+	z-index: 5;
+}
+
+.front-leg-back {
+	position: absolute;
+	height: 80px;
+	width: 30px;
+	top: 200px;
+	left: 190px;
+	background-color: rgb(107, 28, 28);
+	border-bottom-left-radius: 10px;
+	z-index: 1;
+}
+
+.back-leg-fore {
+	position: absolute;
+	height: 80px;
+	width: 30px;
+	top: 220px;
+	left: 350px;
+	background-color: brown;
+	border-bottom-left-radius: 10px;
+	z-index: 5;
+}
+
+.back-leg-back {
+	position: absolute;
+	height: 80px;
+	width: 30px;
+	top: 200px;
+	left: 390px;
+	background-color: rgb(107, 28, 28);
+	border-bottom-left-radius: 10px;
+	z-index: 1;
+}
+
+.tail {
+	position: absolute;
+	height: 130px;
+	width: 5px;
+	top: 0px;
+	left: 460px;
+	background-color: rgb(107, 28, 28);
+	border: 1px solid black;
+	border-bottom-left-radius: 10px;
+	z-index: 1;
+	/* transform: rotate(20deg); */
+	transform-origin: 50% 100%;
+	animation: tilt 0.1s linear infinite;
+}
+
+.tailball {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: -5px;
+	left: -25px;
+	background-color: red;
+	border: 1px solid black;
+	border-radius: 50px;
+}
+
+.bullet-hole {
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	top: 20px;
+	left: 150px;
+	background-image: radial-gradient(black, brown);
+	border-radius: 50px;
+	z-index: 10px;
+}
+
+.bullet-hole2 {
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	top: 30px;
+	left: 260px;
+	background-image: radial-gradient(black, brown);
+	border-radius: 50px;
+	z-index: 10px;
+}
+
+.bullet-hole3 {
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	top: 80px;
+	left: 200px;
+	background-image: radial-gradient(black, brown);
+	border-radius: 50px;
+	z-index: 10px;
+}
+
+.tooth1 {
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	border-bottom: 15px solid white;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	top: 0;
+	bottom: 0;
+	left: 10px;
+	transform: rotate(180deg);
+}
+
+.tooth2 {
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	border-bottom: 15px solid white;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	top: 0;
+	right: 10px;
+	transform: rotate(180deg);
+}
+
+.wannaeat {
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 85px;
+	left:100px;
+	animation: text 1s linear infinite;
+
+}

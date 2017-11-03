@@ -1,0 +1,347 @@
+@keyframes MoveUpDown {
+	0% {
+	  top: 66px;
+	}
+	50% {
+		top: 90px;
+	}
+	100% {
+		top: 89px;
+	}
+}
+
+@keyframes MoveUpDownHead {
+	0% {
+	  top: -45px;
+	}
+	50% {
+		top: -25px;
+	}
+	100% {
+		top: 5px;
+	}
+}
+
+@keyframes RotateEyebrowLeft {
+	0% {
+		-ms-transform: rotate(0deg); /* IE 9 */
+		-webkit-transform: rotate(0def); /* Chrome, Safari, Opera */
+		transform: rotate(0deg);
+	}
+	50% {
+		-ms-transform: rotate(20deg); /* IE 9 */
+		-webkit-transform: rotate(20deg); /* Chrome, Safari, Opera */
+		transform: rotate(20deg);
+	}
+	100% {
+		-ms-transform: rotate(0deg); /* IE 9 */
+		-webkit-transform: rotate(0def); /* Chrome, Safari, Opera */
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes RotateEyebrowRight {
+	0% {
+		-ms-transform: rotate(0deg); /* IE 9 */
+		-webkit-transform: rotate(0def); /* Chrome, Safari, Opera */
+		transform: rotate(0deg);
+	}
+	50% {
+		-ms-transform: rotate(-20deg); /* IE 9 */
+		-webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+		transform: rotate(-20deg);
+	}
+	100% {
+		-ms-transform: rotate(0deg); /* IE 9 */
+		-webkit-transform: rotate(0def); /* Chrome, Safari, Opera */
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes TextAppear {
+    0%   {opacity: 0; color: green; }
+    25%  {opacity: 0.5; color: purple;}
+    50%  {opacity: 0.5; color: purple;}
+    100% {opacity: 0; color:green;}
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html { height: 100%; }
+
+.bark {
+    animation: TextAppear 1s infinite;
+    -webkit-animation: TextAppear 2s linear infinite;
+    -webkit-animation-direction: alternate;
+    background-color: transparent;
+    color: red;
+    width: 400px;
+    height: 42px;
+    position: absolute;
+    top: 51px;
+    left: 191px;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	background-color: #eee;
+	overflow: hidden;
+	margin: 3px;
+	padding: 0;
+}
+
+body.transparent {
+	background: transparent;
+}
+body.transparent .main-section {
+	border: 0;
+	background: transparent;
+}
+
+.main-section {
+	position: relative;
+	border: 3px solid #000;
+	width: 480px;
+	height: 360px;
+	background-color:#fff;
+}
+
+.head {
+	position: absolute;
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+    background-color: #E69C53;
+    left: 65px;
+    top: -45px;
+	z-index: 2;
+	animation: MoveUpDownHead 1s infinite;
+	-webkit-animation: MoveUpDownHead 2s ease-out infinite;
+	-webkit-animation-direction: alternate;
+}
+
+.eye {
+	width: 12px;
+    height: 16px;
+	border-radius:5px;
+	background-color: black;
+	position: absolute;
+}
+
+.eyebrow-one {
+    position: absolute;
+    width: 43px;
+    height: 8px;
+    background-color: black;
+    left: 0px;
+    top: 7px;
+    z-index: 5;
+    border-radius: 5px;
+	transform: rotate(20deg);
+	animation: RotateEyebrowLeft 1s infinite;
+	-webkit-animation: RotateEyebrowLeft 2s ease-out infinite;
+	-webkit-animation-direction: alternate;
+}
+
+.eyebrow-two {
+    position: absolute;
+    width: 43px;
+    height: 8px;
+    background-color: black;
+    left: 50px;
+    top: 7px;
+    z-index: 5;
+    border-radius: 5px;
+	transform: rotate(-20deg);
+	animation: RotateEyebrowRight 1s infinite;
+	-webkit-animation: RotateEyebrowRight 2s ease-out infinite;
+	-webkit-animation-direction: alternate;
+}
+
+.left-eye {
+    top: 20px;
+    left: 25px;
+}
+
+.right-eye {
+	
+    top: 20px;
+    left: 65px;
+}
+
+.ear {
+    top: 0px;
+    left: 80px;
+    position: absolute;
+    width: 30px;
+    height: 150px;
+    background-color: brown;
+    border-radius: 25px;
+}
+
+.left-ear {
+    top: 0px;
+	left: -10px;
+}
+
+.right-ear {
+    top: 0px;
+    left: 80px;
+}
+
+.nose {
+	top: 65px;
+    left: 36px;
+    width: 27px;
+    height: 12px;
+    border-radius: 5px;
+    background-color: black;
+    position: absolute;
+    z-index: 3;
+}
+
+.nose-shine {
+}
+
+.mouth {
+	top: 54px;
+    left: 15px;
+    width: 68px;
+    height: 55px;
+    border-radius: 23px;
+    background-color: darkgrey;
+    position: absolute;
+    z-index: 2;
+}
+
+.tongue{
+	top: 77px;
+    left: 28px;
+    position: absolute;
+    width: 41px;
+    height: 56px;
+    background-color: #d612ac;
+    border-radius: 25px;
+	z-index: 1;
+	animation: MoveUpDown 1s infinite;
+	-webkit-animation: MoveUpDown 2s linear infinite;
+	-webkit-animation-direction: alternate;
+}
+
+.body {
+	position: absolute;
+    top: 95px;
+    left: 115px;
+    width: 217px;
+    height: 102px;
+    background-color: #E69C53;
+    border-radius: 32px;
+	z-index: 0;
+}
+
+.leg {
+	position: absolute;
+    width: 30px;
+    height: 61px;
+    border-radius: 0 0 25px 25px;
+    z-index: -1;
+    top: 100px;
+    left: 11px;
+}
+
+.front-leg-one {
+	left: 43px;
+	background-color: rgb(100, 52, 13);
+}
+
+.front-leg-two {
+	left: 64px;
+	background-color: #E69C53;
+}
+
+.back-leg-one {
+	left: 138px;
+	background-color: rgb(100, 52, 13);
+}
+
+.back-leg-two {
+	left:161px;
+	background-color:  #E69C53;
+}
+
+.tail {
+    background-color: #E69C53;
+    border-radius: 15px;
+    position: absolute;
+    width: 31px;
+    height: 26px;
+    left: 195px;
+    top: -9px;
+}
+
+.stripe {
+	background-color: rgb(100, 52, 13);
+	position: absolute;
+    width: 30px;
+    height: 61px;
+    border-radius: 0 0 25px 25px;
+    z-index: -1;
+    top: 100px;
+    left: 11px;
+}
+
+.stripe-one {
+	top:0px;
+	left:80px;
+}
+
+.stripe-two {
+	top:0px;
+	left:130px;
+	background-color: gold;
+}
+
+.dog-tag {
+	border: solid 1px;
+	border-radius: 5px;
+	color: maroon;
+	background-color: gold;
+	top: 90px;
+	left: -20px;
+	height: 30px;
+	padding:2px;
+	position: absolute;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font-weight: 800;
+}
+
+.dog-chain {
+	position: absolute;
+	width: 10px;
+	height: 50px;
+	top: 50px;
+	left: 15px;
+	background-color: gold;
+}
+
+.tattoo {
+	background-color: transparent;
+    font-size: 22px;
+    position: absolute;
+    top: 37px;
+    font-weight: 800;
+	left: 126px;
+	-ms-transform: rotate(-40deg); /* IE 9 */
+    -webkit-transform: rotate(-40deg); /* Chrome, Safari, Opera */
+	transform: rotate(-40deg);
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+}

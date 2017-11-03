@@ -1,0 +1,33 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html { height: 100%; }
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	background-color: #eee;
+	overflow: hidden;
+	margin: 3px;
+	padding: 0;
+}
+
+body.transparent {
+	background: transparent;
+}
+body.transparent .main-section {
+	border: 0;
+	background: transparent;
+}
+
+.main-section {
+	border: 3px solid #000;
+	width: 480px;
+	height: 360px;
+	background-color:#fff;
+}

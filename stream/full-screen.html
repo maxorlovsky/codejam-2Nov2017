@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	
+	<style>
+	html {
+		width: 100%;
+		height: 100%;
+	}
+	
+	body {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background-color: #fff;
+	}
+
+	.main-wrapper {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	.main-wrapper iframe {
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		border: 0;
+		overflow: hidden;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+	.main-wrapper iframe.active {
+		display: block;
+	}
+
+	.main-wrapper .team-name {
+		font-size: 1.5rem;
+		text-align: center;
+		overflow: hidden;
+		width: auto;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		position: absolute;
+		top: 1em;
+		left: 1%;
+		border: 3px solid #000;
+		background-color: rgba(255,255,255,0.8);
+		padding: 0.2em 0.7em;
+	}
+
+	.loading-bar {
+		height: 0.2rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: gold;
+		z-index: 3;
+		transition: .3s;
+	}
+	</style>
+
+    <title>Betsson Code Jam</title>
+</head>
+
+<body>
+
+<div class="loading-bar"></div>
+
+<div class="main-wrapper">
+	<iframe src="../team3/index.html" class="active"></iframe>
+	<iframe src="../team4/index.html"></iframe>
+	<iframe src="../team5/index.html"></iframe>
+	<iframe src="../team7/index.html"></iframe>
+	<div class="team-name">Eagles</div>
+</div>
+
+<script>
+var frameNum = 1;
+var seconds = 20;
+var percentage = 0;
+var teamNames = ['', 'Eagles', 'A', 'Talgaryen', 'Savage'];
+
+setInterval(function() {
+	document.querySelector('.main-wrapper iframe:nth-child(' + frameNum + ')').className = '';
+	frameNum++;
+	
+	if (document.querySelector('.main-wrapper iframe:nth-child(' + frameNum + ')') === null) {
+		frameNum = 1;
+	}
+	
+	document.querySelector('.team-name').innerHTML = teamNames[frameNum];
+	
+	document.querySelector('.main-wrapper iframe:nth-child(' + frameNum + ')').className = 'active';
+	
+	percentage = 0;
+}, seconds * 1000);
+
+setInterval(function() {
+	percentage += 100 / seconds;
+	document.querySelector('.loading-bar').style.width = percentage + '%';
+}, 1000);
+</script>
+</body>
+</html>
