@@ -41,20 +41,6 @@
 
     drawGrid();
 
-    setInterval(function() {
-        console.log("new interval");
-        if (teamStartNumber >= teamsAmount) {
-            teamStartNumber = 0;
-            frameNum = 0;
-        }
-        else {
-            frameNum++;
-        }
-        
-        percentage = 0;
-        drawGrid();
-    }, seconds * 1000);
-
     function drawGrid() {
 		document.querySelector('.contestants').className += ' hide';
         document.querySelector('.contestants').innerHTML = '';
