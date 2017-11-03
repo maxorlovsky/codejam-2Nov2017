@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link rel="stylesheet" href="stream/main.css">
+    <title>1st OBG Code Jam</title>
+</head>
+<body>
+    <div class="container">
+        <div class="contestants"></div>
+    </div>
+	
+    <script>
+    var teamStartNumber = 0;
+    var frameNum = 1;
+    var seconds = 20;
+    var percentage = 0;
+    var displayOnScreen = 8;
+    var teamNames = [
+        'Last Minute',
+        'GoodTeamName',
+        'Eagles',
+        'A',
+        'Talgaryen',
+        'CYT',
+        'Savage'
+    ];
+    var teamsAmount = teamNames.length;
+    var folderprefix = "team";
+    var baseUrl = "";
+
+    var element = '\
+        <div class="contestant">\
+            <iframe src="{baseUrl}{team}/skeleton.html?transparent" allowtransparency="true" frameborder="0" scrolling="no"></iframe>\
+            <div class="team-name">{name}</div>\
+        </div>\
+    ';
+
+    drawGrid();
+
+    setInterval(function() {
+        console.log("new interval");
+        if (teamStartNumber >= teamsAmount) {
+            teamStartNumber = 0;
+            frameNum = 0;
+        }
+        else {
+            frameNum++;
+        }
+        
+        percentage = 0;
+        drawGrid();
+    }, seconds * 1000);
+
+    function drawGrid() {
+		document.querySelector('.contestants').className += ' hide';
+        document.querySelector('.contestants').innerHTML = '';
+
+        for (var i = teamStartNumber; i < teamsAmount; ++i) {
+            document.querySelector('.contestants').innerHTML += element
+                .replace('{name}', teamNames[i])
+                .replace('{baseUrl}', baseUrl)
+                .replace('{team}', folderprefix + (i+1) )
+                .replace(/{nr}/g, i);
+                teamStartNumber++;
+
+            if (i%displayOnScreen === (displayOnScreen-1)) {
+                break;
+            }
+        }
+		
+		setTimeout(function() {
+			document.querySelector('.contestants').className = document.querySelector('.contestants').className.replace(' hide', '');
+		}, 250);
+    }
+    </script>
+</body>
+</html>
